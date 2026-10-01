@@ -8,21 +8,21 @@ function App() {
 
   const path = location.pathname.replace(/^\/|\/$/g, "")
 
-  const story = stories.find(
-    (item) =>
-      path === item.id ||
-      path.startsWith(`${item.id}/`),
-  )
+  const story =
+    stories.find(
+      (item) =>
+        path === item.id ||
+        path.startsWith(`${item.id}/`),
+    ) ?? null
 
   const variantId = story
     ? path.slice(story.id.length + 1)
     : ""
 
-  const variant = story
-    ? story.variants.find(
-        (item) => item.id === variantId,
-      ) ?? story.variants[0]
-    : undefined
+  const variant =
+    story?.variants.find(
+      (item) => item.id === variantId,
+    ) ?? story?.variants[0] ?? null
 
   useEffect(() => {
     if (!story || !variant) {
@@ -58,7 +58,9 @@ function App() {
       (item) => item.id === id,
     )
 
-    if (!nextStory) return
+    if (!nextStory || nextStory.variants.length === 0) {
+      return
+    }
 
     navigate(
       `/${nextStory.id}/${nextStory.variants[0].id}`,
@@ -66,10 +68,14 @@ function App() {
   }
 
   function selectVariant(id: string) {
+    if (!story) return
+
     navigate(`/${story.id}/${id}`)
   }
 
   function copyCode() {
+    if (!variant) return
+
     navigator.clipboard.writeText(variant.code)
   }
 
