@@ -22,5 +22,5 @@ ggplot(df, aes(area = number, fill = number, label = Dimensions)) +
     grow = TRUE,
     reflow = TRUE
   ) +
-  scale_fill_viridis_c(option = "D", guide = "none") +
+  scale_fill_viridis_c(option = "H", guide = "none") +
   theme_void()

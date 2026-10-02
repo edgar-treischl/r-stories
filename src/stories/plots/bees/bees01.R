@@ -4,8 +4,8 @@ library(ggbeeswarm)
 
 ggplot(penguins, aes(x = species, y = body_mass_g, color = species)) +
   geom_beeswarm(
-    size = 2.5,
-    alpha = 0.75,
+    size = 1.4,
+    alpha = 0.85,
     priority = "density"
   ) +
   scale_color_manual(
@@ -25,7 +25,7 @@ ggplot(penguins, aes(x = species, y = body_mass_g, color = species)) +
   theme_minimal(base_size = 14) +
   theme(
     legend.position = "none",
-    plot.title = element_text(face = "bold", size = 18),
+    plot.title = element_text(face = "bold", size = 16),
     plot.subtitle = element_text(color = "gray40"),
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank()

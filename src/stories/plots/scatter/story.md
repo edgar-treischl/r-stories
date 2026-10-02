@@ -1,6 +1,6 @@
 ---
 id: plots/scatter
-title: Scatter Plot
+title: Scatter
 category: Plots
 description: Examine the relationship between two numerical variables; reveal patterns, correlations, and outliers.
 ---

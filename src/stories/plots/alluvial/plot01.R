@@ -15,8 +15,8 @@ dat <- as.data.frame(Titanic) |>
   )
 
 survival_cols <- c(
-  "Yes" = "#2A9D8F",
-  "No" = "#E76F51"
+  "Yes" = "#009E73",
+  "No" = "#E69F00"
 )
 
 ggplot(
@@ -43,13 +43,13 @@ ggplot(
   geom_text(
     stat = "stratum",
     aes(label = after_stat(stratum)),
-    size = 4.2,
+    size = 3,
     fontface = "bold",
     color = "#303030"
   ) +
   scale_x_discrete(
     limits = c("Class", "Sex", "Survived"),
-    labels = c("Passenger class", "Sex", "Survival"),
+    labels = c("Class", "Sex", "Survival"),
     expand = c(0.12, 0.12)
   ) +
   scale_fill_manual(
@@ -57,7 +57,7 @@ ggplot(
     values = survival_cols,
     labels = c(
       "Yes" = "Survived",
-      "No" = "Did not survive"
+      "No" = "Not survived"
     )
   ) +
   labs(
@@ -65,9 +65,9 @@ ggplot(
     subtitle = "Passenger class, sex, and survival",
     x = NULL,
     y = "Number of passengers",
-    caption = "Source: R's built-in Titanic dataset"
+    caption = "Source: Titanic dataset"
   ) +
-  theme_minimal(base_size = 13) +
+  theme_minimal(base_size = 12) +
   theme(
     panel.grid.major.x = element_blank(),
     panel.grid.minor = element_blank(),
@@ -77,7 +77,6 @@ ggplot(
     ),
     axis.text.x = element_text(
       size = 12,
-      face = "bold",
       color = "#303030"
     ),
     axis.text.y = element_text(
@@ -96,7 +95,7 @@ ggplot(
       color = "#444444"
     ),
     plot.title = element_text(
-      size = 19,
+      size = 14,
       face = "bold",
       color = "#222222",
       margin = margin(b = 5)

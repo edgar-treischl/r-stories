@@ -1,6 +1,6 @@
 ---
 id: plots/bees
-title: Bees Plot
+title: Bees
 category: Plots
 description: A bee swarm plot shows individual observations, with points spread out to reduce overlap and reveal the distribution of the data.
 ---
