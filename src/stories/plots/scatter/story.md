@@ -21,7 +21,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
 
 ```
 
-![](plot01.png)
+![](plot01.svg)
 
 ## Colored
 
@@ -35,7 +35,7 @@ ggplot(penguins, aes(bill_length_mm, bill_depth_mm, color = species)) +
   geom_point()
 ```
 
-![](./plot02.png)
+![](./plot02.svg)
 
 ## Faceted
 
@@ -50,4 +50,4 @@ ggplot(penguins, aes(bill_length_mm, bill_depth_mm)) +
   facet_wrap(~species)
 ```
 
-![](./plot03.png)
+![](./plot03.svg)

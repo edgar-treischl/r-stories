@@ -158,6 +158,18 @@ header p {
   object-fit: contain;
 }
 
+.preview-svg {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+}
+
+.preview-raster {
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: contain;
+}
+
 .code-section {
   margin-top: 32px;
 }
@@ -324,6 +336,12 @@ pre {
   height: 100%;
   object-fit: contain;
   transition: transform 200ms ease;
+}
+
+.card-image img[src$=".svg"],
+.card-image img.card-svg {
+  width: 90%;
+  height: 90%;
 }
 
 .story-card:hover .card-image img {

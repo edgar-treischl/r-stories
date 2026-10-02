@@ -16,4 +16,4 @@ The following plot uses a waffle chart to show *the number of pupils across diff
 !r(waffle.R)
 ```
 
-![](./01_waffle.png)
+![](./plot01.svg)

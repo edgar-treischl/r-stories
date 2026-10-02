@@ -198,6 +198,7 @@ function App() {
           <img
             src={variant.image}
             alt={variant.title}
+            className={variant.image.endsWith('.svg') ? 'preview-svg' : 'preview-raster'}
           />
         </section>
       </main>

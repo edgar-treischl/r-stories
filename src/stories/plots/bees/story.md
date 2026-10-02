@@ -15,7 +15,7 @@ The following plot uses a bee swarm plot to compare the **body mass of penguins 
 !r(bees01.R)
 ```
 
-![](01_bees_basic.png)
+![](plot01.svg)
 
 ## Violin
 
@@ -25,5 +25,5 @@ The next plot combines a violin plot with a bee swarm plot, allowing us to see b
 !r(bees02.R)
 ```
 
-![](./02_bees_violin.png)
+![](./plot02.svg)
 
