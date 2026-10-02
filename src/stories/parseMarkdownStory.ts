@@ -188,7 +188,10 @@ function parseVariantSection(
   }
 
   return {
-    id: titleLine.toLowerCase().replace(/\s+/g, "-"),
+    id: titleLine
+      .toLowerCase()
+      .replace(/[^\w\s-]/g, "") // Remove special characters
+      .replace(/\s+/g, "-"), // Replace spaces with hyphens
     title: titleLine,
     description: descriptionLines.length > 0 
       ? descriptionLines.join("\n").trim()
