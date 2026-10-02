@@ -143,30 +143,33 @@ header p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 420px;
+  min-height: 520px;
   margin-top: 40px;
   border: 1px solid #d4d4d8;
   border-radius: 10px;
   background: #ffffff;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px;
 }
 
 .preview img {
   max-width: 100%;
-  max-height: 600px;
+  max-height: 90vh;
   object-fit: contain;
 }
 
 .preview-svg {
-  max-width: 100%;
-  max-height: 600px;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  max-height: none;
   object-fit: contain;
 }
 
 .preview-raster {
   max-width: 100%;
-  max-height: 600px;
+  max-height: 90vh;
   object-fit: contain;
 }
 
@@ -325,7 +328,7 @@ pre {
   width: 100%;
   height: 160px;
   overflow: hidden;
-  background: #f4f4f5;
+  background: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
