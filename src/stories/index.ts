@@ -16,6 +16,12 @@ const imageModules = import.meta.glob(
   { eager: true, query: "?url", import: "default" },
 ) as Record<string, string>
 
+// Load all R code files as raw text for easy inclusion in stories
+const codeModules = import.meta.glob(
+  "./**/*.R",
+  { eager: true, query: "?raw", import: "default" },
+) as Record<string, string>
+
 export const stories = Object.entries(markdownModules)
   .map(([path, content]) => {
     // Extract base directory from path (e.g., "./plots/scatter/story.md" -> "plots/scatter")
@@ -34,6 +40,19 @@ export const stories = Object.entries(markdownModules)
       return url
     }
 
-    return parseMarkdownStory(content, imagePath)
+    // Resolve a code file name relative to this story's directory
+    const codePath = (fileName: string) => {
+      const key = `${basePath}/${fileName}`
+      const code = codeModules[key]
+
+      if (!code) {
+        console.warn(`Story code file not found: ${key}`)
+        return ""
+      }
+
+      return code
+    }
+
+    return parseMarkdownStory(content, imagePath, codePath)
   })
   .filter((story) => story !== null) as Story[]

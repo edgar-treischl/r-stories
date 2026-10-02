@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { stories } from "./stories"
 import { highlightCode } from "./highlight"
+import { parseInlineMarkdown } from "./utils/parseMarkdown"
 
 function App() {
   const [highlightedCode, setHighlightedCode] = useState("")
@@ -143,7 +144,7 @@ function App() {
           <h1>{story.title}</h1>
 
           {story.description && (
-            <p>{story.description}</p>
+            <p dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(story.description) }} />
           )}
         </header>
 
@@ -166,9 +167,7 @@ function App() {
         </div>
 
         {variant.description && (
-          <p className="variant-description">
-            {variant.description}
-          </p>
+          <p className="variant-description" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(variant.description) }} />
         )}
 
         <section className="code-section">

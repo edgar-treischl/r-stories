@@ -39,6 +39,7 @@ interface MarkdownFrontmatter {
 export function parseMarkdownStory(
   content: string,
   imagePath: (imageName: string) => string,
+  codePath?: (fileName: string) => string,
 ): Story | null {
   // Extract frontmatter
   const frontmatterMatch = content.match(
@@ -76,7 +77,7 @@ export function parseMarkdownStory(
 
   for (let i = startIdx; i < variantSections.length; i++) {
     const section = variantSections[i]
-    const variant = parseVariantSection(section, imagePath)
+    const variant = parseVariantSection(section, imagePath, codePath)
     if (variant) {
       variants.push(variant)
     }
@@ -116,6 +117,7 @@ function parseFrontmatter(text: string): Partial<MarkdownFrontmatter> {
 function parseVariantSection(
   section: string,
   imagePath: (imageName: string) => string,
+  codePath?: (fileName: string) => string,
 ): StoryVariant | null {
   // Extract title (first line, removing ## if present)
   const lines = section.split("\n")
@@ -158,7 +160,14 @@ function parseVariantSection(
   }
 
   const codeLines = lines.slice(codeBlockStart + 1, codeBlockEnd)
-  const code = codeLines.join("\n").trim()
+  let code = codeLines.join("\n").trim()
+
+  // Check if the code is a file reference like !r(filename.R)
+  const fileRefMatch = code.match(/^!r\((.+?)\)$/)
+  if (fileRefMatch && codePath) {
+    const fileName = fileRefMatch[1]
+    code = codePath(fileName)
+  }
 
   // Extract image reference
   let imageUrl = ""
