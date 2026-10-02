@@ -11,7 +11,7 @@ import App from "./App"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/r-stories/">
       <Routes>
         <Route path="*" element={<App />} />
       </Routes>
