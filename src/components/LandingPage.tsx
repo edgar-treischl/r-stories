@@ -15,7 +15,6 @@ export function LandingPage() {
           <div className="brand-mark">R</div>
           <div>
             <strong>R Stories</strong>
-            <span>Visualization examples</span>
           </div>
         </button>
 
@@ -46,8 +45,8 @@ export function LandingPage() {
       <main className="content">
         <header>
           <div className="breadcrumb">Welcome</div>
-          <h1>R Stories Gallery</h1>
-          <p>Explore beautiful data visualization examples built with R and ggplot2. Select a story from the sidebar to get started.</p>
+          <h1>R Stories</h1>
+          <p>Explore data visualization examples built with R and ggplot2 and the R ecosystem. Select a story from the sidebar to get started.</p>
         </header>
 
         <section className="gallery-grid">

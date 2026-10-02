@@ -107,7 +107,6 @@ function App() {
 
           <div>
             <strong>R Stories</strong>
-            <span>Visualization examples</span>
           </div>
         </button>
 
