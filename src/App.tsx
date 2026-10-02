@@ -173,8 +173,7 @@ function App() {
 
         <section className="code-section">
           <div className="section-header">
-            <h2>R</h2>
-
+            <h2>Code Snippet</h2>
             <button onClick={copyCode}>
               Copy
             </button>
