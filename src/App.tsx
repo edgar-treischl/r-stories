@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom"
 import { stories } from "./stories"
 import { highlightCode } from "./highlight"
 import { parseInlineMarkdown } from "./utils/parseMarkdown"
+import { LandingPage } from "./components/LandingPage"
 
 function App() {
   const [highlightedCode, setHighlightedCode] = useState("")
@@ -10,6 +11,7 @@ function App() {
   const navigate = useNavigate()
 
   const path = location.pathname.replace(/^\/|\/$/g, "")
+  const isLandingPage = !path
 
   const story =
     stories.find(
@@ -28,6 +30,8 @@ function App() {
     ) ?? story?.variants[0] ?? null
 
   useEffect(() => {
+    if (isLandingPage) return
+
     if (!story || !variant) {
       const firstStory = stories[0]
 
@@ -46,13 +50,17 @@ function App() {
     if (location.pathname !== expectedPath) {
       navigate(expectedPath, { replace: true })
     }
-  }, [story, variant, location.pathname, navigate])
+  }, [story, variant, location.pathname, navigate, isLandingPage])
 
   useEffect(() => {
     if (!variant) return
 
     highlightCode(variant.code, 'r').then(setHighlightedCode)
   }, [variant])
+
+  if (isLandingPage) {
+    return <LandingPage />
+  }
 
   if (!story || !variant) {
     return null
@@ -91,14 +99,17 @@ function App() {
   return (
     <div className="app">
       <aside className="sidebar">
-        <div className="brand">
+        <button
+          className="brand"
+          onClick={() => navigate("/")}
+        >
           <div className="brand-mark">R</div>
 
           <div>
             <strong>R Stories</strong>
             <span>Visualization examples</span>
           </div>
-        </div>
+        </button>
 
         <nav>
           {categories.map((category) => (
