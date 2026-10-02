@@ -2,7 +2,7 @@
 id: plots/bees
 title: Bees Plot
 category: Plots
-description: Different ways to create a bees plot with ggplot2.
+description: A bee swarm plot shows individual observations, with points spread out to reduce overlap and reveal the distribution of the data.
 ---
 
 ## Basic
