@@ -180,6 +180,15 @@ function App() {
           <div className="variant-description" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(variant.description) }} />
         )}
 
+
+        <section className="preview">
+          <img
+            src={variant.image}
+            alt={variant.title}
+            className={variant.image.endsWith('.svg') ? 'preview-svg' : 'preview-raster'}
+          />
+        </section>
+
         <section className="code-section">
           <div className="section-header">
             <h2>Code Snippet</h2>
@@ -191,14 +200,6 @@ function App() {
           <div
             className="shiki"
             dangerouslySetInnerHTML={{ __html: highlightedCode }}
-          />
-        </section>
-
-        <section className="preview">
-          <img
-            src={variant.image}
-            alt={variant.title}
-            className={variant.image.endsWith('.svg') ? 'preview-svg' : 'preview-raster'}
           />
         </section>
       </main>

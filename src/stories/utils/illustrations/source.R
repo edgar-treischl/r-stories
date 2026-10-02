@@ -386,7 +386,7 @@ datasaurus_plot <- function() {
     ggplot2::labs(title = "The datasauRus and some of his friends") +
     ggplot2::theme(plot.title = ggplot2::element_text(size = 28, face = "bold")) +
     ggplot2::theme(strip.text.x = ggplot2::element_text(
-      size = 22, color = "black", face = "bold"
+      size = 14, color = "black", face = "bold"
     ))
   
   
@@ -405,7 +405,7 @@ datasaurus_plot <- function() {
     ggplot2::theme_minimal() +
     ggplot2::theme(text = ggplot2::element_text(size = 10, family = "Amatic+SC")) +
     ggplot2::theme(strip.text.x = ggplot2::element_text(
-      size = 22, color = "black", face = "bold"
+      size = 14, color = "black", face = "bold"
     ))
   
   cowplot::plot_grid(p1, p2)

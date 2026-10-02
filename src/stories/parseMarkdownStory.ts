@@ -8,6 +8,41 @@ interface MarkdownFrontmatter {
 }
 
 /**
+ * Splits markdown body text on H2 headers (## ), respecting code blocks.
+ * Code blocks (between ``` markers) are not split.
+ */
+function splitOnH2(text: string): string[] {
+  const sections: string[] = []
+  let currentSection = ""
+  let inCodeBlock = false
+  const lines = text.split("\n")
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+
+    // Toggle code block state
+    if (line.startsWith("```")) {
+      inCodeBlock = !inCodeBlock
+    }
+
+    // Check for H2 header outside code blocks
+    if (!inCodeBlock && line.startsWith("## ") && currentSection.trim()) {
+      sections.push(currentSection)
+      currentSection = line
+    } else {
+      if (currentSection) currentSection += "\n"
+      currentSection += line
+    }
+  }
+
+  if (currentSection.trim()) {
+    sections.push(currentSection)
+  }
+
+  return sections
+}
+
+/**
  * Parses a markdown story file with frontmatter and variant sections.
  * 
  * Format:
@@ -68,15 +103,11 @@ export function parseMarkdownStory(
     return null
   }
 
-  // Extract variants from h2 sections
+  // Extract variants from h2 sections (respecting code blocks)
   const variants: StoryVariant[] = []
-  const variantSections = bodyText.split(/\n## /);
-  
-  // First section might be intro text, skip it
-  const startIdx = bodyText.startsWith("## ") ? 0 : 1
+  const variantSections = splitOnH2(bodyText)
 
-  for (let i = startIdx; i < variantSections.length; i++) {
-    const section = variantSections[i]
+  for (const section of variantSections) {
     const variant = parseVariantSection(section, imagePath, codePath)
     if (variant) {
       variants.push(variant)
