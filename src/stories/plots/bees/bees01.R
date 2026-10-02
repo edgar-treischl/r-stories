@@ -2,7 +2,7 @@ library(palmerpenguins)
 library(ggplot2)
 library(ggbeeswarm)
 
-plot <- ggplot(penguins, aes(x = species, y = body_mass_g, color = species)) +
+ggplot(penguins, aes(x = species, y = body_mass_g, color = species)) +
   geom_beeswarm(
     size = 2.5,
     alpha = 0.75,

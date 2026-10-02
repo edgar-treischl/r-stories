@@ -136,13 +136,16 @@ function parseVariantSection(
       codeBlockStart = i
       break
     }
-    if (lines[i].trim()) {
-      descriptionLines.push(lines[i])
-    }
+    descriptionLines.push(lines[i])
   }
 
   if (codeBlockStart === -1) {
     return null // No code block found
+  }
+
+  // Remove trailing empty lines from description and trim
+  while (descriptionLines.length > 0 && !descriptionLines[descriptionLines.length - 1].trim()) {
+    descriptionLines.pop()
   }
 
   // Extract code block

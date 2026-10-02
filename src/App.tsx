@@ -144,7 +144,7 @@ function App() {
           <h1>{story.title}</h1>
 
           {story.description && (
-            <p dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(story.description) }} />
+            <div dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(story.description) }} />
           )}
         </header>
 
@@ -167,7 +167,7 @@ function App() {
         </div>
 
         {variant.description && (
-          <p className="variant-description" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(variant.description) }} />
+          <div className="variant-description" dangerouslySetInnerHTML={{ __html: parseInlineMarkdown(variant.description) }} />
         )}
 
         <section className="code-section">
