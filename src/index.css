@@ -186,6 +186,36 @@ pre {
   line-height: 1.6;
 }
 
+.shiki {
+  margin: 0;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.shiki pre {
+  margin: 0;
+  padding: 20px;
+  border-radius: 8px;
+  background: transparent;
+  color: inherit;
+  overflow-x: auto;
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.shiki code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 13px;
+}
+
+.shiki span {
+  margin: 0;
+}
+
 
 .variants {
   display: flex;

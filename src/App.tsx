@@ -1,8 +1,10 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { stories } from "./stories"
+import { highlightCode } from "./highlight"
 
 function App() {
+  const [highlightedCode, setHighlightedCode] = useState("")
   const location = useLocation()
   const navigate = useNavigate()
 
@@ -44,6 +46,12 @@ function App() {
       navigate(expectedPath, { replace: true })
     }
   }, [story, variant, location.pathname, navigate])
+
+  useEffect(() => {
+    if (!variant) return
+
+    highlightCode(variant.code, 'r').then(setHighlightedCode)
+  }, [variant])
 
   if (!story || !variant) {
     return null
@@ -163,13 +171,6 @@ function App() {
           </p>
         )}
 
-        <section className="preview">
-          <img
-            src={variant.image}
-            alt={variant.title}
-          />
-        </section>
-
         <section className="code-section">
           <div className="section-header">
             <h2>R</h2>
@@ -179,9 +180,17 @@ function App() {
             </button>
           </div>
 
-          <pre>
-            <code>{variant.code}</code>
-          </pre>
+          <div
+            className="shiki"
+            dangerouslySetInnerHTML={{ __html: highlightedCode }}
+          />
+        </section>
+
+        <section className="preview">
+          <img
+            src={variant.image}
+            alt={variant.title}
+          />
         </section>
       </main>
     </div>
