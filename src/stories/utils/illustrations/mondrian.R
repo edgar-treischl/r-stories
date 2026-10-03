@@ -138,17 +138,10 @@ make_paris <- function(seed = 1023) {
 }
 
 
-# ============================================================
-# New York period
-# ============================================================
 
 make_new_york <- function(seed = 1023) {
   
   set.seed(seed)
-  
-  # ----------------------------------------------------------
-  # Palette
-  # ----------------------------------------------------------
   
   pal <- c(
     "#255293",   # blue
@@ -157,18 +150,12 @@ make_new_york <- function(seed = 1023) {
     "ghostwhite" # white
   )
   
-  # ----------------------------------------------------------
-  # Irregular grid
-  # ----------------------------------------------------------
   
   df <- data.frame(
     x = sort(sample(0:18, 7)),
     y = sort(sample(0:18, 7))
   )
   
-  # ----------------------------------------------------------
-  # All cells in the grid
-  # ----------------------------------------------------------
   
   df_rect <- expand.grid(
     x = df$x[-length(df$x)],
@@ -177,8 +164,6 @@ make_new_york <- function(seed = 1023) {
     y_lead = df$y[-1]
   )
   
-  # Keep only cells where the coordinates form a valid
-  # neighbouring pair.
   df_rect <- df_rect |>
     dplyr::filter(
       x_lead > x,
@@ -188,9 +173,6 @@ make_new_york <- function(seed = 1023) {
       color = 4L
     )
   
-  # ----------------------------------------------------------
-  # Colour a relatively small number of cells
-  # ----------------------------------------------------------
   
   n_coloured <- max(
     3,
@@ -256,8 +238,6 @@ make_new_york <- function(seed = 1023) {
     
     my_theme()
 }
-
-
 
 
 paris <- make_paris()
