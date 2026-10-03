@@ -8,10 +8,12 @@ import {
 
 import "./index.css"
 import App from "./App"
+import ScrollToTop from "./components/ScrollToTop"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <BrowserRouter basename="/r-stories/">
+      <ScrollToTop />
       <Routes>
         <Route path="*" element={<App />} />
       </Routes>
