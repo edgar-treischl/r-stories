@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='384.00pt' height='240.00pt' viewBox='0 0 384.00 240.00'>
+<g class='svglite'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+    .svglite g.glyphgroup path {
+      fill: inherit;
+      stroke: none;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #F8F8FF;'/>
+<defs>
+  <clipPath id='cpMC4wMHwzODQuMDB8MC4wMHwyNDAuMDA='>
+    <rect x='0.00' y='0.00' width='384.00' height='240.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHwzODQuMDB8MC4wMHwyNDAuMDA=)'>
+<rect x='0.00' y='-0.000000000000057' width='384.00' height='240.00' style='stroke-width: 1.16; stroke: #FFFFFF; fill: #F8F8FF;' />
+</g>
+<defs>
+  <clipPath id='cpNS45OHwzNzguMDJ8NS45OHwyMzQuMDI='>
+    <rect x='5.98' y='5.98' width='372.04' height='228.04' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpNS45OHwzNzguMDJ8NS45OHwyMzQuMDI=)'>
+<line x1='22.89' y1='234.02' x2='22.89' y2='5.98' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='192.00' y1='234.02' x2='192.00' y2='5.98' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='107.44' y1='234.02' x2='107.44' y2='5.98' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='361.11' y1='234.02' x2='361.11' y2='5.98' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='5.98' y1='164.42' x2='378.02' y2='164.42' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='5.98' y1='16.34' x2='378.02' y2='16.34' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='5.98' y1='45.96' x2='378.02' y2='45.96' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='5.98' y1='223.66' x2='378.02' y2='223.66' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='22.89' y1='194.04' x2='107.44' y2='194.04' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='22.89' y1='105.19' x2='22.89' y2='105.19' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='107.44' y1='194.04' x2='192.00' y2='194.04' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='361.11' y1='164.42' x2='107.44' y2='164.42' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='107.44' y1='223.66' x2='107.44' y2='223.66' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='107.44' y1='105.19' x2='107.44' y2='105.19' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='107.44' y1='75.58' x2='361.11' y2='75.58' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='107.44' y1='45.96' x2='192.00' y2='45.96' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<line x1='22.89' y1='31.15' x2='107.44' y2='31.15' style='stroke-width: 10.67; stroke-linecap: butt;' />
+<rect x='26.69' y='18.27' width='76.95' height='25.77' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #DB0A16;' />
+<rect x='111.25' y='166.35' width='76.95' height='55.38' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #255293;' />
+<rect x='195.81' y='47.88' width='161.50' height='114.61' style='stroke-width: 1.16; stroke: none; stroke-linecap: butt; stroke-linejoin: miter; fill: #F8C72D;' />
+</g>
+<g clip-path='url(#cpMC4wMHwzODQuMDB8MC4wMHwyNDAuMDA=)'>
+</g>
+</g>
+</svg>

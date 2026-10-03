@@ -62,7 +62,7 @@ cowplot::plot_grid(p1, p2)
 
 ![](plot01.svg)
 
-## Anscombe's Quartet
+## Anscombe
 
  Anscombe’s Quartet is a set of **four datasets that have nearly identical summary statistics but look very different when plotted**. It demonstrates why **visualizing data is important**, as averages and correlations alone can hide important patterns, outliers, and relationships.
 
@@ -115,3 +115,20 @@ anscombe_plot
 ```
 
 ![](./plot02.svg)
+
+
+## Mondrian
+
+Piet Mondrian was a Dutch painter and a major figure in the development of abstract art. During his Paris period (1911–1938), he progressively moved away from representational painting toward a highly reduced visual language of vertical and horizontal lines, geometric forms, and primary colours.
+
+In the 1920s, his mature style became associated with De Stijl and Neoplasticism: compositions were constructed from black lines and white fields, with carefully balanced areas of red, blue, and yellow. Rather than depicting objects, Mondrian sought what he described as a universal visual order based on relationships between line, proportion, colour, and space.
+
+The R code creates a generative interpretation of Mondrian's Paris-period compositions. It uses randomly generated horizontal and vertical structures, strong black lines, and small areas of primary colour to explore the balance and rhythm between line, proportion, colour, and empty space.
+
+
+
+```r
+!r(mondrian.R)
+```
+
+![](./plot03.svg)

@@ -16,7 +16,7 @@ ggplot2::ggsave(
 
 
 ggplot2::ggsave(
-  filename = "src/stories/utils/illustrations/plot02.svg",
+  filename = "src/stories/utils/illustrations/plot03.svg",
   width = 1600,
   height = 1000,
   units = "px"
