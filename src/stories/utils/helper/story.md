@@ -26,7 +26,7 @@ Use such a funnel when you want to **visually connect a specific segment of one 
 
 
 ```r
-!r(source.R)
+!r(funnel.R)
 ```
 
 ![](./plot01.svg)
