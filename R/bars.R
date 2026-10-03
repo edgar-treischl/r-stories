@@ -8,7 +8,7 @@ ggplot2::ggsave(
 
 
 ggplot2::ggsave(
-  filename = "src/stories/plots/ridge/plot01.svg",
+  filename = "src/stories/plots/wordcloud/plot01.svg",
   width = 1600,
   height = 1000,
   units = "px"
@@ -16,7 +16,7 @@ ggplot2::ggsave(
 
 
 ggplot2::ggsave(
-  filename = "src/stories/utils/illustrations/plot03.svg",
+  filename = "src/stories/plots/wordcloud/plot01.svg",
   width = 3200,
   height = 2000,
   units = "px"
