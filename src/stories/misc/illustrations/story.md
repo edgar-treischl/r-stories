@@ -5,6 +5,16 @@ category: Misc
 description: Some visual examples demonstrating why data visualization matters.
 ---
 
+## Gapminder
+
+
+
+
+```r
+!r(gapminder.R)
+```
+
+![](./plot01.svg)
 
 
 
@@ -15,18 +25,9 @@ description: Some visual examples demonstrating why data visualization matters.
 !r(data_joins.R)
 ```
 
-![](plot01.svg)
-
-## Gapminder
+![](plot02.svg)
 
 
-
-
-```r
-!r(gapminder.R)
-```
-
-![](./plot02.svg)
 
 
 ## Long Wide
